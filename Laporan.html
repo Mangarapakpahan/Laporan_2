@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Praktikum</title>
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.5;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #0073e6;
+    }
+    .berantakan {
+      font-family: "Comic Sans MS", cursive;
+      background-color: yellow;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Laporan Teori</h1>
+  <h2>Nama: Mangara Ferdianto Pakpahan | NIM: 202331261</h2>
+
+  <h3 onclick="toggleKonten(this)">Apa itu HTML, CSS, dan JavaScript?</h3>
+  <p>HTML digunakan untuk struktur, CSS untuk tampilan, dan JavaScript untuk interaksi.</p>
+
+  <h3 onclick="toggleKonten(this)">Bagaimana mereka bekerja bersama?</h3>
+  <p>Ketiganya bekerja secara sinergis untuk menciptakan situs web yang menarik dan berfungsi penuh.</p>
+
+  <button onclick="toggleMode()">Ubah Mode Tampilan</button>
+
+  <script>
+    // Fungsi untuk menyembunyikan/menampilkan konten
+    function toggleKonten(element) {
+      const nextSibling = element.nextElementSibling;
+      if (nextSibling.style.display === "none") {
+        nextSibling.style.display = "block";
+      } else {
+        nextSibling.style.display = "none";
+      }
+    }
+
+    // Fungsi untuk mengganti mode tampilan
+    function toggleMode() {
+      document.body.classList.toggle("berantakan");
+    }
+  </script>
+</body>
+</html>
